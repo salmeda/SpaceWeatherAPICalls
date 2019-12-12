@@ -1,0 +1,38 @@
+[INFO] Disabling enhanced local repository: using legacy is strongly discouraged to ensure build reproducibility.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------< org.example.local_project2.job:SpaceWeatherSetContext >--------
+[INFO] Building LOCAL_PROJECT2 SpaceWeatherSetContext-0.1.0 (0.1,Job Designs) 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ SpaceWeatherSetContext ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ SpaceWeatherSetContext ---
+[WARNING] The POM for org.eclipse.platform:org.eclipse.osgi:jar:3.13.300 is missing, no dependency information available
+[WARNING] The POM for org.apache.commons:commons-exec:jar:1.2 is missing, no dependency information available
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ SpaceWeatherSetContext ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ SpaceWeatherSetContext ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ SpaceWeatherSetContext ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ SpaceWeatherSetContext ---
+[INFO] Building jar: /home/bigdata/talend/TOS_BD-20191031_1204-V7.3.1M3/workspace/LOCAL_PROJECT/LOCAL_PROJECT2/poms/jobs/process/spaceweathersetcontext_0.1/target/spaceweathersetcontext_0_1.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ SpaceWeatherSetContext ---
+[INFO] Reading assembly descriptor: /home/bigdata/talend/TOS_BD-20191031_1204-V7.3.1M3/workspace/LOCAL_PROJECT/LOCAL_PROJECT2/poms/jobs/process/spaceweathersetcontext_0.1/src/main/assemblies/assembly.xml
+[WARNING] The POM for org.apache.felix:maven-bundle-plugin:jar:2.1.0 is missing, no dependency information available
+[INFO] Building zip: /home/bigdata/talend/TOS_BD-20191031_1204-V7.3.1M3/workspace/LOCAL_PROJECT/LOCAL_PROJECT2/poms/jobs/process/spaceweathersetcontext_0.1/target/spaceweathersetcontext_0_1.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.578 s
+[INFO] Finished at: 2019-12-05T10:50:18Z
+[INFO] ------------------------------------------------------------------------
