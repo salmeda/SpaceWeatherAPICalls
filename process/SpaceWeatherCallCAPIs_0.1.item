@@ -2,6 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="NASAApiKey" prompt="NASAApiKey?" promptNeeded="false" type="id_String" value="&quot;PKgUD2jtlRdIdfdK5FPbfiPCMcD3Nc3NEih8D2Wy&quot;"/>
+    <contextParameter comment="" name="InitialDate" prompt="InitialDate?" promptNeeded="false" type="id_String" value="&quot;2019-01-01&quot;"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -41,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="ENC:[PpJ55T+4Z56gLi9LCjwsFKBqUYOF11UUWPPBp+fK]" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="ENC:[riHWF/wvA/Bx6law70oO+Lm7BZ//ctQDx5v4jew0]" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -76,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="ENC:[XWiEKQlT0U/aydC4tbXj/CdaSjW5emlIWDqa0SiT]" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[uquvTnKULuJpgfK5801Sz9ZRY5NkGweakndH2A3j]" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -105,9 +106,9 @@
     <routinesParameter id="_06pYAAuvEeqnFvJtWJBoxQ" name="TalendStringUtil"/>
     <routinesParameter id="_07z1oAuvEeqnFvJtWJBoxQ" name="TalendString"/>
   </parameters>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
@@ -115,13 +116,13 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;NASANW&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;bdsql&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="ENC:[j5IqmdNFlbBiho17Uk5kt8SUrIYngEgeay+ZyXwvwdrl09kZHg==]"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ENC:[h83tUbpAfkEGltDoQsKFdEQ4v+bjafX8bkAvSi4Wddvz2dMVEw==]"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select DATE_FORMAT(DATE_ADD(ifnull(max(EndDate),'2000-01-01'), INTERVAL 1 DAY),'%Y-%m-%d') StartDate,&#x9;DATE_FORMAT(CURDATE(),'%Y-%m-%d') EndDate&#xA;&#x9;&#x9;from nasaAPIcalls&#xA;&#x9;&#x9;where apiName= 'CME'&#xA;&#x9;&#x9;and Status='Finished'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select apiName,&#xA;DATE_FORMAT(DATE_ADD(ifnull(max(EndDate),'\&quot;+context.InitialDate+\&quot;'), INTERVAL 1 DAY),'%Y-%m-%d') StartDate,&#x9;&#xA;DATE_FORMAT(DATE_SUB(CURDATE(),INTERVAL 1 DAY),'%Y-%m-%d') EndDate&#xA;from nasaAPIcalls &#xA;where Status='Finished'&#xA;group by apiName;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -136,20 +137,23 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="EndDate"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="apiName"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="GetDates"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="-1" name="StartDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="EndDate" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="apiName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_aXpRABZQEeqYv61TE6R4jg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_5yxLQBzLEeqKisKjJdYXKg-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
@@ -161,34 +165,48 @@
     <metadata connector="FLOW" label="SetVars" name="SetVars">
       <column comment="" key="false" length="-1" name="CMEStartDate" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CMEEndDate" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CMEAStartDate" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CMEAEndDate" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="SetVarValues" name="SetVarValues">
       <column comment="" key="false" length="-1" name="CMEStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="CMEEndDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var"/>
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="VCMEStartDate" expression="SendDates.apiName=='CME'?SendDates.StartDate " type="id_String"/>
+        <mapperTableEntries name="VCMEEndDAte" expression="SendDates.apiName=='CME'?SendDates.EndDate " type="id_String"/>
+        <mapperTableEntries name="VCMEAStartDate" expression="SendDates.apiName=='CMEAnalysis'?SendDates.StartDateDate " type="id_String"/>
+        <mapperTableEntries name="VCMEAEndDate" expression="SendDates.apiName=='CMEAnalysis'?SendDates.EndDate " type="id_String"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="SetVars">
-        <mapperTableEntries name="CMEStartDate" expression="SendDates.StartDate " type="id_String"/>
-        <mapperTableEntries name="CMEEndDate" expression="SendDates.EndDate " type="id_String"/>
+        <mapperTableEntries name="CMEStartDate" expression="Var.VCMEStartDate " type="id_String"/>
+        <mapperTableEntries name="CMEEndDate" expression="Var.VCMEEndDAte " type="id_String"/>
+        <mapperTableEntries name="CMEAStartDate" expression="SendDates.apiName=='CMEAnalysis'?SendDates.StartDateDate " type="id_String"/>
+        <mapperTableEntries name="CMEAEndDate" expression="SendDates.apiName=='CMEAnalysis'?SendDates.EndDate " type="id_String"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="SetVarValues" columnNameFilter="">
-        <mapperTableEntries name="CMEStartDate" expression="SendDates.StartDate " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CMEEndDate" expression="SendDates.EndDate " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CMEStartDate" expression="Var.VCMEStartDate " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CMEEndDate" expression="Var.VCMEEndDAte " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="SendDates" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="StartDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="EndDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="apiName" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;CMEStartDate&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
       <elementValue elementRef="KEY" value="&quot;CMEEndDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;CMEAStartDate&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;CMEAEndDate&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -197,7 +215,7 @@
       <column comment="" key="false" length="-1" name="CMEEndDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/CME?&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -219,7 +237,7 @@
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC" show="false"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="ENC:[/M6R/yc1cFQ+UzdOAQHyDJhRtgRqR6Bjo54OVyTNy/g9whXJU7Q=]" show="false"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="ENC:[IFOz9f6ut21AyUYHvl8rX7yx3Z8muFDecNaWh0SlxxvYVTlfRyM=]" show="false"/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
@@ -247,7 +265,7 @@
     <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="ENC:[7g5/2OV27UcDM5A+Jt8EaKLW7JyyrWaisvsHtuz/]" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="ENC:[zXO5YBcyPmg6mKYCdcwqBwINL2d/1mvYD8ewqRrH]" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="SetVarValues" name="tRESTClient_1">
       <column comment="" key="false" length="-1" name="CMEStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -263,7 +281,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputJSON" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="192">
+  <node componentName="tFileOutputJSON" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputJSON_1" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;/home/bigdata/talend/TOS_BD-20191031_1204-V7.3.1M3/workspace/LOCAL_PROJECT/CMEout.json&quot;"/>
     <elementParameter field="CHECK" name="GENERATE_JSON_ARRAY" value="true"/>
@@ -281,11 +299,22 @@
       <elementValue elementRef="TRACE_COLUMN" value="StartDate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="apiName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SendDates" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="SetVarValues" lineStyle="0" metaname="SetVarValues" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tSetGlobalVar_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CMEAEndDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CMEAStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SetVarValues" show="false"/>
   </connection>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_5MYE8B1gEeqMkvZ7epXo4A" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_5MYE8R1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_Server" prompt="MysSQL_NASANW_bdsql_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+  <contextParameter xmi:id="_5MYE8h1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_Database" prompt="MysSQL_NASANW_bdsql_Database?" promptNeeded="false" type="id_String" value="NASANW"/>
+  <contextParameter xmi:id="_5MYE8x1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_Password" prompt="MysSQL_NASANW_bdsql_Password?" promptNeeded="false" type="id_Password" value="ENC:[XJGj6k53Yw+F8oEtSXAbBxbVVlmgmWVCcCS+1fztDfn/l0A=]"/>
+  <contextParameter xmi:id="_5MYE9B1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_AdditionalParams" prompt="MysSQL_NASANW_bdsql_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
+  <contextParameter xmi:id="_5MYE9R1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_Port" prompt="MysSQL_NASANW_bdsql_Port?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_5MYE9h1gEeqMkvZ7epXo4A" comment="" name="MysSQL_NASANW_bdsql_Login" prompt="MysSQL_NASANW_bdsql_Login?" promptNeeded="false" type="id_String" value="bdsql"/>
+</talendfile:ContextType>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_vHwI4B1hEeqMkvZ7epXo4A" name="MySQLNASANW" id="_rRPxYB1hEeqMkvZ7epXo4A" label="MySQLNASANW" dataPackage="_vIfvwB1hEeqMkvZ7epXo4A" DatabaseType="MySQL" DriverClass="com.mysql.cj.jdbc.Driver" URL="jdbc:mysql://localhost:/NASANW?noDatetimeStringSync=true" dbVersionString="MYSQL_8" Port="" Username="bdsql" Password="ENC:[HGrjyvHtyZFnZYJfcQW1HuoLOxwhZIE3pvSMmebIQf4wXuU=]" ServerName="localhost" SID="NASANW" SqlSynthax="" StringQuote="" NullChar="" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false">
+    <taggedValue xmi:id="_vHwI4R1hEeqMkvZ7epXo4A" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_vIFgEB1hEeqMkvZ7epXo4A" tag="package filter" value=""/>
+    <taggedValue xmi:id="_vIFgER1hEeqMkvZ7epXo4A" tag="Status" value=""/>
+    <taggedValue xmi:id="_vIFgEh1hEeqMkvZ7epXo4A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_vIFgEx1hEeqMkvZ7epXo4A" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_vIGHIB1hEeqMkvZ7epXo4A" tag="Description" value=""/>
+    <taggedValue xmi:id="_vIGHIR1hEeqMkvZ7epXo4A" tag="Author" value=""/>
+    <taggedValue xmi:id="_vIGHIh1hEeqMkvZ7epXo4A" tag="otherParameter"/>
+    <taggedValue xmi:id="_vIQfMB1hEeqMkvZ7epXo4A" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_vIQfMR1hEeqMkvZ7epXo4A" tag="DB ProductVersion" value="8.0.18-0ubuntu0.19.10.1"/>
+    <taggedValue xmi:id="_vIQfMh1hEeqMkvZ7epXo4A" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_vHwI4h1hEeqMkvZ7epXo4A" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_vIfvwB1hEeqMkvZ7epXo4A" name="NASANW" dataManager="_vHwI4B1hEeqMkvZ7epXo4A"/>
+</xmi:XMI>

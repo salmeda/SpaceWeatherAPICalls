@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_aigbgCYaEeqlzPRsWau-lA" name="SchemaCME" dataPackage="_aigbqCYaEeqlzPRsWau-lA" JSONFilePath="/home/bigdata/SWOut/Json/data.json" Encoding="UTF-8" inputModel="false" outputFilePath="CMESchema.json">
+    <root xmi:id="_aigbgSYaEeqlzPRsWau-lA" JSONPath="/root" RelatedColumn="" Attribute="main" Order="79" Type="id_String"/>
+    <loop xmi:id="_aigbgiYaEeqlzPRsWau-lA" JSONPath="/root/object" RelatedColumn="" Attribute="main" Order="80" Type="id_String"/>
+    <loop xmi:id="_aigbgyYaEeqlzPRsWau-lA" JSONPath="/root/object/activityID" RelatedColumn="activityID" Attribute="branch" Order="81" Type="id_Date"/>
+    <loop xmi:id="_aigbhCYaEeqlzPRsWau-lA" JSONPath="/root/object/startTime" RelatedColumn="startTime" Attribute="branch" Order="82" Type="id_Date"/>
+    <loop xmi:id="_aigbhSYaEeqlzPRsWau-lA" JSONPath="/root/object/sourceLocation" RelatedColumn="sourceLocation" Attribute="branch" Order="83" Type="id_String"/>
+    <loop xmi:id="_aigbhiYaEeqlzPRsWau-lA" JSONPath="/root/object/activeRegionNum" RelatedColumn="activeRegionNum" Attribute="branch" Order="84" Type="id_String"/>
+    <loop xmi:id="_aigbhyYaEeqlzPRsWau-lA" JSONPath="/root/object/instruments" RelatedColumn="" Attribute="branch" Order="85" Type="id_String"/>
+    <loop xmi:id="_aigbiCYaEeqlzPRsWau-lA" JSONPath="/root/object/instruments/id" RelatedColumn="id" Attribute="branch" Order="86" Type="id_Integer"/>
+    <loop xmi:id="_aigbiSYaEeqlzPRsWau-lA" JSONPath="/root/object/instruments/displayName" RelatedColumn="displayName" Attribute="branch" Order="87" Type="id_String"/>
+    <loop xmi:id="_aigbiiYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses" RelatedColumn="" Attribute="branch" Order="88" Type="id_String"/>
+    <loop xmi:id="_aigbiyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/time21_5" RelatedColumn="time21_5" Attribute="branch" Order="89" Type="id_Date"/>
+    <loop xmi:id="_aigbjCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/latitude" RelatedColumn="latitude" Attribute="branch" Order="90" Type="id_Double"/>
+    <loop xmi:id="_aigbjSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/longitude" RelatedColumn="longitude" Attribute="branch" Order="91" Type="id_String"/>
+    <loop xmi:id="_aigbjiYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/halfAngle" RelatedColumn="halfAngle" Attribute="branch" Order="92" Type="id_Float"/>
+    <loop xmi:id="_aigbjyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/speed" RelatedColumn="speed" Attribute="branch" Order="93" Type="id_Float"/>
+    <loop xmi:id="_aigbkCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/type" RelatedColumn="type" Attribute="branch" Order="94" Type="id_Character"/>
+    <loop xmi:id="_aigbkSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/isMostAccurate" RelatedColumn="isMostAccurate" Attribute="branch" Order="95" Type="id_Boolean"/>
+    <loop xmi:id="_aigbkiYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/note" RelatedColumn="note" Attribute="branch" Order="96" Type="id_String"/>
+    <loop xmi:id="_aigbkyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/levelOfData" RelatedColumn="levelOfData" Attribute="branch" Order="97" Type="id_Integer"/>
+    <loop xmi:id="_aigblCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList" RelatedColumn="" Attribute="branch" Order="98" Type="id_String"/>
+    <loop xmi:id="_aigblSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/modelCompletionTime" RelatedColumn="modelCompletionTime" Attribute="branch" Order="99" Type="id_Date"/>
+    <loop xmi:id="_aigbliYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/au" RelatedColumn="au" Attribute="branch" Order="100" Type="id_Float"/>
+    <loop xmi:id="_aigblyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/estimatedShockArrivalTime" RelatedColumn="estimatedShockArrivalTime" Attribute="branch" Order="101" Type="id_String"/>
+    <loop xmi:id="_aigbmCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/estimatedDuration" RelatedColumn="estimatedDuration" Attribute="branch" Order="102" Type="id_String"/>
+    <loop xmi:id="_aigbmSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/rmin_re" RelatedColumn="rmin_re" Attribute="branch" Order="103" Type="id_String"/>
+    <loop xmi:id="_aigbmiYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/kp_18" RelatedColumn="kp_18" Attribute="branch" Order="104" Type="id_String"/>
+    <loop xmi:id="_aigbmyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/kp_90" RelatedColumn="kp_90" Attribute="branch" Order="105" Type="id_String"/>
+    <loop xmi:id="_aigbnCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/kp_135" RelatedColumn="kp_135" Attribute="branch" Order="106" Type="id_String"/>
+    <loop xmi:id="_aigbnSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/kp_180" RelatedColumn="kp_180" Attribute="branch" Order="107" Type="id_String"/>
+    <loop xmi:id="_aigbniYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/isEarthGB" RelatedColumn="isEarthGB" Attribute="branch" Order="108" Type="id_Boolean"/>
+    <loop xmi:id="_aigbnyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/impactList" RelatedColumn="" Attribute="branch" Order="109" Type="id_String"/>
+    <loop xmi:id="_aigboCYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/impactList/isGlancingBlow" RelatedColumn="isGlancingBlow" Attribute="branch" Order="110" Type="id_Boolean"/>
+    <loop xmi:id="_aigboSYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/impactList/location" RelatedColumn="location" Attribute="branch" Order="111" Type="id_String"/>
+    <loop xmi:id="_aigboiYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/impactList/arrivalTime" RelatedColumn="arrivalTime" Attribute="branch" Order="112" Type="id_Date"/>
+    <loop xmi:id="_aigboyYaEeqlzPRsWau-lA" JSONPath="/root/object/cmeAnalyses/enlilList/cmeIDs" RelatedColumn="cmeIDs" Attribute="branch" Order="113" Type="id_Date"/>
+    <loop xmi:id="_aigbpCYaEeqlzPRsWau-lA" JSONPath="/root/object/linkedEvents" RelatedColumn="" Attribute="branch" Order="114" Type="id_String"/>
+    <loop xmi:id="_aigbpSYaEeqlzPRsWau-lA" JSONPath="/root/object/linkedEvents/activityID" RelatedColumn="activityID1" Attribute="branch" Order="115" Type="id_Date"/>
+    <loop xmi:id="_aigbpiYaEeqlzPRsWau-lA" JSONPath="/root/object/note" RelatedColumn="note1" Attribute="branch" Order="116" Type="id_String"/>
+    <loop xmi:id="_aigbpyYaEeqlzPRsWau-lA" JSONPath="/root/object/catalog" RelatedColumn="catalog" Attribute="branch" Order="117" Type="id_String"/>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_aigbqCYaEeqlzPRsWau-lA" name="default" dataManager="_aigbgCYaEeqlzPRsWau-lA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_aigbqSYaEeqlzPRsWau-lA" id="_X-3PgCYZEeqlzPRsWau-lA" comment="CME API Response Metadata - Schema" label="CMEResponseMetadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbqiYaEeqlzPRsWau-lA" name="activityID" label="activityID" length="-1" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbqyYaEeqlzPRsWau-lA" name="startTime" label="startTime" length="-1" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbrCYaEeqlzPRsWau-lA" name="sourceLocation" label="sourceLocation" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbrSYaEeqlzPRsWau-lA" name="activeRegionNum" label="activeRegionNum" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbriYaEeqlzPRsWau-lA" name="id" label="id" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbryYaEeqlzPRsWau-lA" name="displayName" label="displayName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbsCYaEeqlzPRsWau-lA" name="time21_5" label="time21_5" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbsSYaEeqlzPRsWau-lA" name="latitude" label="latitude" talendType="id_Double"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbsiYaEeqlzPRsWau-lA" name="longitude" label="longitude" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbsyYaEeqlzPRsWau-lA" name="halfAngle" label="halfAngle" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbtCYaEeqlzPRsWau-lA" name="speed" label="speed" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbtSYaEeqlzPRsWau-lA" name="type" label="type" talendType="id_Character"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbtiYaEeqlzPRsWau-lA" name="isMostAccurate" label="isMostAccurate" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbtyYaEeqlzPRsWau-lA" name="note" label="note" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbuCYaEeqlzPRsWau-lA" name="levelOfData" label="levelOfData" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbuSYaEeqlzPRsWau-lA" name="modelCompletionTime" label="modelCompletionTime" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbuiYaEeqlzPRsWau-lA" name="au" label="au" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbuyYaEeqlzPRsWau-lA" name="estimatedShockArrivalTime" label="estimatedShockArrivalTime" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbvCYaEeqlzPRsWau-lA" name="estimatedDuration" label="estimatedDuration" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbvSYaEeqlzPRsWau-lA" name="rmin_re" label="rmin_re" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbviYaEeqlzPRsWau-lA" name="kp_18" label="kp_18" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbvyYaEeqlzPRsWau-lA" name="kp_90" label="kp_90" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbwCYaEeqlzPRsWau-lA" name="kp_135" label="kp_135" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbwSYaEeqlzPRsWau-lA" name="kp_180" label="kp_180" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbwiYaEeqlzPRsWau-lA" name="isEarthGB" label="isEarthGB" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbwyYaEeqlzPRsWau-lA" name="isGlancingBlow" label="isGlancingBlow" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbxCYaEeqlzPRsWau-lA" name="location" label="location" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbxSYaEeqlzPRsWau-lA" name="arrivalTime" label="arrivalTime" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbxiYaEeqlzPRsWau-lA" name="cmeIDs" label="cmeIDs" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbyCYaEeqlzPRsWau-lA" name="note" label="note1" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_aigbySYaEeqlzPRsWau-lA" name="catalog" label="catalog" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_yUoFgCYdEeqlzPRsWau-lA" name="SchemaCMEA" dataPackage="_yUoFjSYdEeqlzPRsWau-lA" JSONFilePath="/home/bigdata/SWOut/Json/CMEASchema.json" Encoding="UTF-8" inputModel="false">
+    <root xmi:id="_yUoFgSYdEeqlzPRsWau-lA" JSONPath="/root" RelatedColumn="" Attribute="main" Order="1" Type="id_String"/>
+    <loop xmi:id="_yUoFgiYdEeqlzPRsWau-lA" JSONPath="/root/object" RelatedColumn="" Attribute="main" Order="2" Type="id_String"/>
+    <loop xmi:id="_yUoFgyYdEeqlzPRsWau-lA" JSONPath="/root/object/time21_5" RelatedColumn="time21_5" Attribute="branch" Order="3" Type="id_Date"/>
+    <loop xmi:id="_yUoFhCYdEeqlzPRsWau-lA" JSONPath="/root/object/latitude" RelatedColumn="latitude" Attribute="branch" Order="4" Type="id_Double"/>
+    <loop xmi:id="_yUoFhSYdEeqlzPRsWau-lA" JSONPath="/root/object/longitude" RelatedColumn="longitude" Attribute="branch" Order="5" Type="id_Double"/>
+    <loop xmi:id="_yUoFhiYdEeqlzPRsWau-lA" JSONPath="/root/object/halfAngle" RelatedColumn="halfAngle" Attribute="branch" Order="6" Type="id_Float"/>
+    <loop xmi:id="_yUoFhyYdEeqlzPRsWau-lA" JSONPath="/root/object/speed" RelatedColumn="speed" Attribute="branch" Order="7" Type="id_Float"/>
+    <loop xmi:id="_yUoFiCYdEeqlzPRsWau-lA" JSONPath="/root/object/type" RelatedColumn="type" Attribute="branch" Order="8" Type="id_Character"/>
+    <loop xmi:id="_yUoFiSYdEeqlzPRsWau-lA" JSONPath="/root/object/isMostAccurate" RelatedColumn="isMostAccurate" Attribute="branch" Order="9" Type="id_Boolean"/>
+    <loop xmi:id="_yUoFiiYdEeqlzPRsWau-lA" JSONPath="/root/object/associatedCMEID" RelatedColumn="associatedCMEID" Attribute="branch" Order="10" Type="id_Date"/>
+    <loop xmi:id="_yUoFiyYdEeqlzPRsWau-lA" JSONPath="/root/object/note" RelatedColumn="note" Attribute="branch" Order="11" Type="id_String"/>
+    <loop xmi:id="_yUoFjCYdEeqlzPRsWau-lA" JSONPath="/root/object/catalog" RelatedColumn="catalog" Attribute="branch" Order="12" Type="id_String"/>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_yUoFjSYdEeqlzPRsWau-lA" name="default" dataManager="_yUoFgCYdEeqlzPRsWau-lA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_yUoFjiYdEeqlzPRsWau-lA" id="_jey5sCYdEeqlzPRsWau-lA" label="SchemaCMEAMetadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFjyYdEeqlzPRsWau-lA" name="time21_5" label="time21_5" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFkCYdEeqlzPRsWau-lA" name="latitude" label="latitude" talendType="id_Double"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFkSYdEeqlzPRsWau-lA" name="longitude" label="longitude" talendType="id_Double"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFkiYdEeqlzPRsWau-lA" name="halfAngle" label="halfAngle" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFkyYdEeqlzPRsWau-lA" name="speed" label="speed" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFlCYdEeqlzPRsWau-lA" name="type" label="type" talendType="id_Character"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFlSYdEeqlzPRsWau-lA" name="isMostAccurate" label="isMostAccurate" talendType="id_Boolean"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFliYdEeqlzPRsWau-lA" name="associatedCMEID" label="associatedCMEID" talendType="id_Date"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFlyYdEeqlzPRsWau-lA" name="note" label="note" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_yUoFmCYdEeqlzPRsWau-lA" name="catalog" label="catalog" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -279,7 +279,6 @@
                 <include>org.talend.libraries:cxf-rt-rs-extension-providers-3.3.1:jar:6.0.0</include>
                 <include>org.talend.libraries:xmlschema-core-2.2.4:jar:6.0.0</include>
                 <include>org.talend.libraries:opensaml-xacml-saml-impl-3.3.0:jar:6.0.0</include>
-                <include>org.talend.libraries:mysql-connector-java-5.1.30-bin:jar:6.0.0</include>
                 <include>org.talend.libraries:json_simple-1.1:jar:6.0.0</include>
                 <include>org.talend.libraries:opensaml-xacml-impl-3.3.0:jar:6.0.0</include>
             </includes>
@@ -303,6 +302,7 @@
                 <include>org.apache.santuario:xmlsec:jar:2.1.2</include>
                 <include>org.apache.cxf:cxf-rt-databinding-jaxb:jar:3.3.1</include>
                 <include>javax.ws.rs:javax.ws.rs-api:jar:2.1</include>
+                <include>mysql:mysql-connector-java:jar:8.0.12</include>
                 <include>org.apache.neethi:neethi:jar:3.1.1</include>
                 <include>org.apache.cxf:cxf-rt-bindings-soap:jar:3.3.1</include>
                 <include>dom4j:dom4j:jar:1.6.1</include>

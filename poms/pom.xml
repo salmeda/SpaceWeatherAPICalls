@@ -15,6 +15,12 @@
     <module>jobs/process/spaceweathercallcme_0.1</module>
     <module>jobs/process/playgroundjob_0.1</module>
     <module>jobs/process/spaceweathercallcapis_0.1</module>
+    <module>jobs/process/spaceweathercallapis_0.1</module>
+    <module>jobs/process/spaceweathercallapisold01_0.1</module>
+    <module>jobs/process/swapicallcme_0.1</module>
+    <module>jobs/process/swapicallcme_valid1_0.1</module>
+    <module>jobs/process/swapicallcme_valid2_0.1</module>
+    <module>jobs/process/swapicallcme_valid3_0.1</module>
   </modules>
   <properties>
     <talend.project.name>SPACEWEATHER</talend.project.name>
