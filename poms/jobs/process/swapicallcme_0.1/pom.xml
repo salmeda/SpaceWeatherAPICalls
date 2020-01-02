@@ -11,18 +11,18 @@
   <groupId>org.example.local_project2.job</groupId>
   <artifactId>SWAPICallCME</artifactId>
   <version>0.1.0</version>
-  <name>SPACEWEATHER SWAPICallCME-0.1.0 (0.1,Job Designs)</name>
+  <name>SPACEWEATHERTLND SWAPICallCME-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <talend.project.name.lowercase>spaceweather</talend.project.name.lowercase>
-    <talend.job.path>spaceweather</talend.job.path>
+    <talend.project.name.lowercase>spaceweathertlnd</talend.project.name.lowercase>
+    <talend.job.path>spaceweathertlnd</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.name>SPACEWEATHER</talend.project.name>
+    <talend.project.name>SPACEWEATHERTLND</talend.project.name>
     <talend.product.version>7.3.1.20191031_1204-M3</talend.product.version>
     <talend.job.finalName>swapicallcme_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.local_project2.pigudf</talend.pigudf.groupid>
@@ -187,6 +187,11 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>mysql-connector-java-5.1.30-bin</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.neethi</groupId>

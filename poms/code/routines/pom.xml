@@ -11,7 +11,7 @@
   <groupId>org.example.local_project2.code</groupId>
   <artifactId>routines</artifactId>
   <version>7.3.1</version>
-  <name>SPACEWEATHER Routines</name>
+  <name>SPACEWEATHERTLND Routines</name>
   <properties>
     <talend.codes.package>routines</talend.codes.package>
   </properties>

@@ -6,7 +6,7 @@
   <artifactId>code.Master</artifactId>
   <version>7.3.1</version>
   <packaging>pom</packaging>
-  <name>SPACEWEATHER Codes Master</name>
+  <name>SPACEWEATHERTLND Codes Master</name>
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
@@ -21,9 +21,11 @@
     <module>jobs/process/swapicallcme_valid1_0.1</module>
     <module>jobs/process/swapicallcme_valid2_0.1</module>
     <module>jobs/process/swapicallcme_valid3_0.1</module>
+    <module>jobs/process/swapicallcme_valid4_0.1</module>
+    <module>jobs/process/swapicallcmea_0.1</module>
   </modules>
   <properties>
-    <talend.project.name>SPACEWEATHER</talend.project.name>
+    <talend.project.name>SPACEWEATHERTLND</talend.project.name>
     <encoding>UTF-8</encoding>
   </properties>
   <build>

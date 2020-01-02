@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_zKXtMQuvEeqnFvJtWJBoxQ" label="SPACEWEATHER" description="" language="java" technicalLabel="SPACEWEATHER" local="true" author="_zLl1MAuvEeqnFvJtWJBoxQ" productVersion="Talend Open Studio for Big Data-7.3.1.20191031_1204-M3" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_zKXtMQuvEeqnFvJtWJBoxQ" label="SpaceWeatherTLND" description="" language="java" technicalLabel="SPACEWEATHERTLND" local="true" author="_zLl1MAuvEeqnFvJtWJBoxQ" productVersion="Talend Open Studio for Big Data-7.3.1.20191031_1204-M3" itemsRelationVersion="1.3">
     <migrationTask xmi:id="_zNockAuvEeqnFvJtWJBoxQ" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_zLl1MAuvEeqnFvJtWJBoxQ" login="user@talend.com" password="D41D8CD98F00B204E9800998ECF8427E"/>

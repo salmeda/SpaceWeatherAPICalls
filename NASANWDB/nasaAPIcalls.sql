@@ -1,0 +1,11 @@
+CREATE TABLE NASANW.nasaAPIcalls (
+CallID INT NOT NULL AUTO_INCREMENT,
+apiName VARCHAR(50) NOT NULL,
+StartDate DATE NOT NULL,
+EndDate DATE,
+Status VARCHAR(15) NOT NULL DEFAULT 'Started' CHECK (Status in ('Started','Error','Finished')),
+FileStatus VARCHAR(15) NOT NULL DEFAULT 'NA' CHECK (FileStatus in ('NA', 'HDFS', 'HDFSError', 'CFormat', 'CFormatError', 'HiveT', 'HiveTError')) ,
+CreationDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ModifiedDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+Message VARCHAR(1500),
+PRIMARY KEY (callID) );
